@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: black;
+            font-family: arial;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .container {
+            text-align: center;
+            border: 1px solid white;
+            width: 500px;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        button {
+            height: 50px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 100px;
+            color: white;
+            background: transparent;
+            font-weight: 900;
+            margin-top: 50px;
+        }
+
+        button:hover {
+            color: black;
+            background: white;
+            transition: .3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>QUIZ</h1>
+            <button onclick="deyk()">START</button>
+    </div>
+    <script>
+        function deyk() {
+            let score = 0;
+            a = prompt('What is the largest existing animal in the world?');
+            b = a.toLowerCase() == 'blue whale';
+            score += b;
+
+            c = prompt('What is my favorite color?');
+            d = c.toLowerCase() == 'white';
+            score += d;
+
+            e = prompt('What is 90 + 12');
+            f = e.toLowerCase() == '102';
+            score += f;
+
+            g = prompt('My age?');
+            h = g.toLowerCase() == '18';
+            score += h;
+
+            i = prompt('Pangalan ni kuwas?');
+            j = i.toLowerCase() == 'allysa mae';
+            score += j;
+
+            alert(`Your total score is ${score} out of 5.`);
+        }
+    </script>
+</body>
+</html>
